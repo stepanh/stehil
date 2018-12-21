@@ -1,6 +1,9 @@
 {
   "version": 2,
   "name": "stehil",
+  "alias": [
+    "stehil.com"
+  ],
   "builds": [
     {"src": "/public/**", "use": "@now/static"},
     { "src": "server.js", "use": "@now/node-server" }
@@ -11,5 +14,8 @@
     {"src": "/favicon(.*)", "dest": "/public/favicon$1"},
     {"src": "/static/(.*)", "dest": "/public/static/$1"},
     {"src": "^/(.*)", "dest": "/server.js"}
-  ]
+  ],
+  "github": {
+    "enabled": false
+  }
 }

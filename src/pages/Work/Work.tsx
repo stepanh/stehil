@@ -11,7 +11,7 @@ const Work: React.FunctionComponent = () => {
       </p>
       <p>
         I used to do contracting a lot. This often meant coming somewhere,
-        fixing something, getting fired for being to expensive, then
+        fixing something, getting fired for being too expensive, then
         getting called back to fix something else.
       </p>
       <p>
@@ -22,7 +22,7 @@ const Work: React.FunctionComponent = () => {
       <p>
         In the dark ages (~2002 for me), writing websites meant mashing some
         HTML, CSS and maybe some cgi/perl/PHP together.
-        We dealt with miriad of browser incompatibility issues,
+        We dealt with myriad of browser incompatibility issues,
         but <b>it was hard to stuff up an entire project</b>.
       </p>
       <p>
@@ -38,8 +38,8 @@ const Work: React.FunctionComponent = () => {
         We were building <a href="https://en.wikipedia.org/wiki/Rich_web_application">RIAs</a>.
         We felt like proper application
         developers. All our code was compiled into a single bundle
-        (back then a <i>swf</i>&nbsp;). We
-        had amazing transitions strong types, classes, good IDE and life was sweeet.
+        (back then an <i>swf</i>&nbsp;). We
+        had amazing transitions strong types, classes, good IDE and life was sweet.
       </p>
       <p>
         Everything worked well in every browser and we kept on adding
@@ -87,7 +87,7 @@ const Work: React.FunctionComponent = () => {
       <h2>Workout Timer</h2>
       <p>What about CrossFit? Is that still a thing or,
         did everyone knocked themselves out with those
-        hundred burpees followed by two hundred pull ups? <a href="http://crosstimer.com/">Take a trip down
+        hundred burpees followed by two hundred pull-ups? <a href="http://crosstimer.com/">Take a trip down
         the memory lane.</a>
       </p>
     </div>

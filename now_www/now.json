@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "stehil-www-alias",
+  "alias": [
+      "www.stehil.com"
+  ],
+  "builds": [
+     { "src": "index.html", "use": "@now/static" }
+  ],
+  "routes": [
+     { "src": "/(.*)", "status": 301, "headers": { "Location": "https://stehil.com/$1" }}
+  ]
+}

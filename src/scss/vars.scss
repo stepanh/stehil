@@ -1,0 +1,88 @@
+// VARIABLES
+$screen-mobile: 375px;
+$screen-tablet: 768px;
+$screen-desktop: 1280px;
+$screen-desktop-xl: 1600px;
+
+$footer_height: 66px;
+
+// BREAKPOINTS
+@mixin mobile {
+  @media (min-width: #{$screen-mobile}) {
+      @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$screen-tablet}) {
+      @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$screen-desktop}) {
+      @content;
+  }
+}
+
+@mixin desktop-xl {
+  @media (min-width: #{$screen-desktop}) {
+      @content;
+  }
+}
+
+// FONTS
+@mixin font-headings {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 900;
+}
+// the default font
+@mixin font-default {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 300;
+}
+
+// MARGINS
+@mixin margins {
+  margin: 32px 16px;
+  @include tablet() {
+    margin: 48px 64px;
+  }
+}
+
+// PADDING
+@mixin padding {
+  padding: 32px 16px;
+  @include mobile() {
+    padding: 32px;
+  }
+  @include tablet() {
+    padding: 48px 64px;
+  }
+}
+
+// HEADINGS
+@mixin h1-default {
+  @include font-headings;
+  font-size: 36px;
+  letter-spacing: 1px;
+  line-height: 1.3;
+  color: #00000045;
+}
+@mixin h2-default {
+  @include font-headings;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #00000099;
+}
+
+// LINKS
+@mixin text-link {
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+

@@ -1,0 +1,18 @@
+@import "../../scss/vars.scss";
+
+.home {
+  text-align: center;
+  padding-bottom: $footer_height;
+}
+
+.home-lifetime {
+  margin-top: 20%;
+}
+.home-emoji {
+  font-size: 100px;
+  color: #dc5959
+}
+.home-references {
+  margin-top: 50px;
+  border-bottom: #cccccccc 1px solid;
+}

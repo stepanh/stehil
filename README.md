@@ -13,7 +13,7 @@ This is the source of [stehil.com](https://stehil.com)
 * [express](https://github.com/expressjs/express)
 * [SCSS](https://sass-lang.com)
 
-This stack is used here just for kicks, it's not needed for a static blog. A way for me to try things out.
+This stack is used here just for kicks, it's not needed for a static blog. Just a playground to try things out.
 
 # What this can do
 
@@ -43,7 +43,7 @@ Node.js with TypeScript is **safer** for me than Java ever was. Win!
 - [ ] Example of lazy (code-split) route
 - [ ] Example of internal API
 - [ ] Revisit Main.tsx routing
-- [ ] Build and deploy with [now.sh](https://zeit.co/now) V1
-- [x] Build with [now.sh](https://zeit.co/now) V1
+- [x] Build and deploy with [now.sh](https://zeit.co/now) V1
+- [ ] Build with [now.sh](https://zeit.co/now) V2
 - [x] Deploy with [now.sh](https://zeit.co/now) V2
 - [ ] Deploy to to Google AppEngine Standard Environment node.js 

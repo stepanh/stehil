@@ -39,7 +39,17 @@ Node.js with TypeScript is **safer** for me than Java ever was. Win!
 - CSS-in-JS solutions **look** nice. But they all increase bundle size and steal a bit of runtime performance.
 - Yes, you're not getting guaranteed encapsulation with SCSS - but it's trivial to fix conflicting styles.
 
-## TODOs
+# Troubleshooting
+1. Getting a weird Typescript error? It might just be an issue with [Yarn](https://github.com/yarnpkg/yarn/issues/6070) or NPM.
+Try
+```
+rm -rf ./node_modules && rm yarn.lock && yarn
+```
+
+2. `fsevents` issue when running tests?
+Try https://github.com/expo/expo/issues/854#issuecomment-343243804 
+
+# TODOs
 - [ ] Example of lazy (code-split) route
 - [ ] Example of internal API
 - [ ] Revisit Main.tsx routing

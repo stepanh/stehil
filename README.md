@@ -1,59 +1,277 @@
-This is the source of [stehil.com](https://stehil.com) 
+# 🚀 AstroWind
 
-> This may be useful if you are building a React app and want to make it easy for
-> [Google Bot](https://support.google.com/webmasters/answer/182072?hl=en) & friends to index your site - so you need SSR and good SEO.
->  **Otherwise use [react-create-app](https://github.com/facebook/create-react-app).**
+<img src="https://raw.githubusercontent.com/onwidget/.github/main/resources/astrowind/lighthouse-score.png" align="right"
+     alt="AstroWind Lighthouse Score" width="100" height="358">
 
-# The Stack
-* [React](https://reactjs.org) (with [hooks](https://reactjs.org/docs/hooks-intro.html) - so much nicer than classes/recompose)
-* [TypeScript](https://typescriptlang.org)
-* [Razzle](https://github.com/jaredpalmer/razzle)
-* [after.js](https://github.com/jaredpalmer/after.js)
-* [react-router](https://github.com/ReactTraining/react-router)
-* [express](https://github.com/expressjs/express)
-* [SCSS](https://sass-lang.com)
+🌟 _Most *starred* & *forked* Astro theme in 2022 & 2023_. 🌟
 
-This stack is used here just for kicks, it's not needed for a static blog. Just a playground to try things out.
+**AstroWind** is a free and open-source template to make your website using **[Astro 4.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**. Ready to start a new project and designed taking into account web best practices.
 
-# What this can do
+- ✅ **Production-ready** scores in **PageSpeed Insights** reports.
+- ✅ Integration with **Tailwind CSS** supporting **Dark mode** and **_RTL_**.
+- ✅ **Fast and SEO friendly blog** with automatic **RSS feed**, **MDX** support, **Categories & Tags**, **Social Share**, ...
+- ✅ **Image Optimization** (using new **Astro Assets** and **Unpic** for Universal image CDN).
+- ✅ Generation of **project sitemap** based on your routes.
+- ✅ **Open Graph tags** for social media sharing.
+- ✅ **Analytics** built-in Google Analytics, and Splitbee integration.
 
-- SSR
-- code-splitting (async-loaded routes)
+<br>
 
-## Why Razzle & after.js instead of next.js?
+<img src="https://raw.githubusercontent.com/onwidget/.github/main/resources/astrowind/screenshot-astro4.png" alt="AstroWind Theme Screenshot">
 
-- Next gives you less freedom in what your URLs can look like by default.  
-- Next is a big library.  
-- Razzle's hot reloading is nicer than what you get with next.
-- Disclaimer: I haven't tried Next v6/v7 properly, it should be lot better than
-the v4 I've used.
+[![onWidget](https://custom-icon-badges.demolab.com/badge/made%20by%20-onWidget-556bf2?style=flat-square&logo=onwidget&logoColor=white&labelColor=101827)](https://onwidget.com)
+[![License](https://img.shields.io/github/license/onwidget/astrowind?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/onwidget/astrowind/blob/main/LICENSE.md)
+[![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/onwidget)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/onwidget/astrowind#contributing)
+[![Known Vulnerabilities](https://snyk.io/test/github/onwidget/astrowind/badge.svg?style=flat-square)](https://snyk.io/test/github/onwidget/astrowind)
+[![Stars](https://img.shields.io/github/stars/onwidget/astrowind.svg?style=social&label=stars&maxAge=86400&color=ff69b4)](https://github.com/onwidget/astrowind)
+[![Forks](https://img.shields.io/github/forks/onwidget/astrowind.svg?style=social&label=forks&maxAge=86400&color=ff69b4)](https://github.com/onwidget/astrowind)
 
-## Why TypeScript
+<br>
 
-Yes, it's a bit of a pain to get it working right initially. Later on, it can be a 
-head scratcher to get types working well, especially if you are going for *maximum strictness*&trade;. But it's **so** worth it,
-especially if you are working in a team, or are a bit forgetful.
-Node.js with TypeScript is **safer** for me than Java ever was. Win!
+<details open>
+<summary>Table of Contents</summary>
 
-## Why SCSS
-- CSS-in-JS solutions **look** nice. But they all increase bundle size and steal a bit of runtime performance.
-- Yes, you're not getting guaranteed encapsulation with SCSS - but it's trivial to fix conflicting styles.
+- [Demo](#demo)
+- [Getting started](#getting-started)
+  - [Project structure](#project-structure)
+  - [Commands](#commands)
+  - [Configuration](#configuration)
+  - [Deploy](#deploy)
+- [Frequently Asked Questions](#frequently-asked-questions)
+- [Related Projects](#related-projects)
+- [Contributing](#contributing)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
 
-# Troubleshooting
-1. Getting a weird Typescript error? It might just be an issue with [Yarn](https://github.com/yarnpkg/yarn/issues/6070) or NPM.
-Try
+</details>
+
+<br>
+
+## Demo
+
+📌 [https://astrowind.vercel.app/](https://astrowind.vercel.app/)
+
+<br>
+
+## Getting started
+
+**AstroWind** tries to give you quick access to creating a website using [Astro 4.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/). It's a free theme which focuses on simplicity, good practices and high performance.
+
+Very little vanilla javascript is used only to provide basic functionality so that each developer decides which framework (React, Vue, Svelte, Solid JS...) to use and how to approach their goals..
+
+### Project structure
+
+Inside **AstroWind** template, you'll see the following folders and files:
+
 ```
-rm -rf ./node_modules && rm yarn.lock && yarn
+/
+├── public/
+│   ├── _headers
+│   └── robots.txt
+├── src/
+│   ├── assets/
+│   │   ├── favicons/
+│   │   ├── images/
+│   │   └── styles/
+│   │       └── tailwind.css
+│   ├── components/
+│   │   ├── blog/
+│   │   ├── common/
+│   │   ├── ui/
+│   │   ├── widgets/
+│   │   │   ├── Header.astro
+│   │   │   └── ...
+│   │   ├── CustomStyles.astro
+│   │   ├── Favicons.astro
+│   │   └── Logo.astro
+│   ├── content/
+│   │   ├── post/
+│   │   │   ├── post-slug-1.md
+│   │   │   ├── post-slug-2.mdx
+│   │   │   └── ...
+│   │   └-- config.ts
+│   ├── layouts/
+│   │   ├── Layout.astro
+│   │   ├── MarkdownLayout.astro
+│   │   └── PageLayout.astro
+│   ├── pages/
+│   │   ├── [...blog]/
+│   │   │   ├── [category]/
+│   │   │   ├── [tag]/
+│   │   │   ├── [...page].astro
+│   │   │   └── index.astro
+│   │   ├── index.astro
+│   │   ├── 404.astro
+│   │   ├-- rss.xml.ts
+│   │   └── ...
+│   ├── utils/
+│   ├── config.yaml
+│   └── navigation.js
+├── package.json
+├── astro.config.mjs
+└── ...
 ```
 
-2. `fsevents` issue when running tests?
-Try https://github.com/expo/expo/issues/854#issuecomment-343243804 
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-# TODOs
-- [ ] Example of lazy (code-split) route
-- [ ] Example of internal API
-- [ ] Revisit Main.tsx routing
-- [x] Build and deploy with [now.sh](https://zeit.co/now) V1
-- [ ] Build with [now.sh](https://zeit.co/now) V2
-- [x] Deploy with [now.sh](https://zeit.co/now) V2
-- [ ] Deploy to to Google AppEngine Standard Environment node.js 
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+Any static assets, like images, can be placed in the `public/` directory if they do not require any transformation or in the `assets/` directory if they are imported directly.
+
+[![Edit AstroWind on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/onwidget/astrowind/tree/main) [![Open in Gitpod](https://svgshare.com/i/xdi.svg)](https://gitpod.io/?on=gitpod#https://github.com/onwidget/astrowind) [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/onwidget/astrowind)
+
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file `README.md`. Update `src/config.yaml` and contents. Have fun!
+
+<br>
+
+### Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command               | Action                                             |
+| :-------------------- | :------------------------------------------------- |
+| `npm install`         | Installs dependencies                              |
+| `npm run dev`         | Starts local dev server at `localhost:3000`        |
+| `npm run build`       | Build your production site to `./dist/`            |
+| `npm run preview`     | Preview your build locally, before deploying       |
+| `npm run format`      | Format codes with Prettier                         |
+| `npm run lint:eslint` | Run Eslint                                         |
+| `npm run astro ...`   | Run CLI commands like `astro add`, `astro preview` |
+
+<br>
+
+### Configuration
+
+Basic configuration file: `./src/config.yaml`
+
+```yaml
+site:
+  name: 'Example'
+  site: 'https://example.com'
+  base: '/' # Change this if you need to deploy to Github Pages, for example
+  trailingSlash: false # Generate permalinks with or without "/" at the end
+
+  googleSiteVerificationId: false # Or some value,
+
+# Default SEO metadata
+metadata:
+  title:
+    default: 'Example'
+    template: '%s — Example'
+  description: 'This is the default meta description of Example website'
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: 'Example'
+    images:
+      - url: '~/assets/images/default.jpg'
+        width: 1200
+        height: 628
+    type: website
+  twitter:
+    handle: '@twitter_user'
+    site: '@twitter_user'
+    cardType: summary_large_image
+
+i18n:
+  language: en
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: true # If the blog will be enabled
+    postsPerPage: 6 # Number of posts per page
+
+    post:
+      isEnabled: true
+      permalink: '/blog/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      robots:
+        index: true
+
+    list:
+      isEnabled: true
+      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
+      robots:
+        index: true
+
+    category:
+      isEnabled: true
+      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
+      robots:
+        index: true
+
+    tag:
+      isEnabled: true
+      pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
+      robots:
+        index: false
+
+    isRelatedPostsEnabled: true # If a widget with related posts is to be displayed below each post
+    relatedPostsCount: 4 # Number of related posts to display
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null # or "G-XXXXXXXXXX"
+
+ui:
+  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+```
+
+<br>
+
+### Deploy
+
+#### Deploy to production (manual)
+
+You can create an optimized production build with:
+
+```shell
+npm run build
+```
+
+Now, your website is ready to be deployed. All generated files are located at
+`dist` folder, which you can deploy the folder to any hosting service you
+prefer.
+
+#### Deploy to Netlify
+
+Clone this repository on own GitHub account and deploy to Netlify:
+
+[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/onwidget/astrowind)
+
+#### Deploy to Vercel
+
+Clone this repository on own GitHub account and deploy to Vercel:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonwidget%2Fastrowind)
+
+<br>
+
+## Frequently Asked Questions
+
+- Why?
+-
+-
+
+<br>
+
+## Related projects
+
+- [TailNext](https://tailnext.vercel.app/) - Free template using Next.js 14 and Tailwind CSS with the new App Router.
+- [Qwind](https://qwind.pages.dev/) - Free template to make your website using Qwik + Tailwind CSS.
+
+## Contributing
+
+If you have any idea, suggestions or find any bugs, feel free to open a discussion, an issue or create a pull request.
+That would be very useful for all of us and we would be happy to listen and take action.
+
+## Acknowledgements
+
+Initially created by [onWidget](https://onwidget.com) and maintained by a community of [contributors](https://github.com/onwidget/astrowind/graphs/contributors).
+
+## License
+
+**AstroWind** is licensed under the MIT license — see the [LICENSE](./LICENSE.md) file for details.

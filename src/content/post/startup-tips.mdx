@@ -1,7 +1,7 @@
 ---
 publishDate: 2024-01-26
 title: Startup tips
-excerpt: Bite-sized snacks about making a living by building software products. There are many great books that go much deeper into pricing, market fit etc.
+excerpt: Bite-sized pieces about building products - stuff I learned along the way. There are many great books that go much deeper into pricing, market fit etc.
 image: https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1651&q=80
 category: Business
 tags:
@@ -53,3 +53,24 @@ You have a brilliant startup idea. You execute flawlessly. People love it. But t
 Does your product rely on a single API, or a single agreement?
 Is there a way to build a redundancy or a failover?
 Is the dependency risk so high it's not worth proceeding?
+
+## Raising money
+
+The typical startup journey is described as raising a Pre-seed, Seed, Series A/B/C/D rounds, followed by an IPO. Then credits roll and everyone celebrates.
+
+In reality, it might not be in the best interest of the founders to raise every single round that ever got named. Raising takes time and effort. Whoever is raising (the CEO, typically) will likely not have the capacity to work on other things well.
+
+Having certain shareholders can be an asset, but some can be trouble even if they are nice people. Some legal actions require notification of all shareholders - good luck chasing that dude on holidays in Thailand, who invested $5k 6 years ago and doesn't remember who you are anymore.
+
+- Some very successful startups (like the [creators of Basecamp](https://37signals.com/)) never raised external funds. They followed the old fasioned way from times before angels and VCs were a thing: Save some money, build an MVP, charge for it, work on growing the MRR (Monthly Recurring Revenue), hire when you can afford more staff.
+- If you want to go faster, consider getting a business loan or raising more money from cofounders. Has everyone maxed out their mortgage and credit cards already?
+- Give generous options to your staff. Some might even agree to work for equity only, for some time on a casual basis.
+- Lastly, raise one of the traditional rounds but be thrifty with the money - make it last longer.
+
+## Ideal team size
+
+[Budgetly](https://www.budgetly.com.au), consists of a financial webapp, mobile app, transaction authorisation service, accounting integration, backoffice and more. It's basically a little bank. Most of it was built by 2 developers (me being one of them). Only after we had significant traction the team grew. I wish we grew faster but somehow many customers say that our product is better that those of our much larger competitors.
+
+The point is that a single developer can get a lot done - in the right environment. Ultimately as a team grows, the less output will each new engineer add. Based on what I've seen, the maximum reasonable number of engineers working on one codebase is about 3 to 15 - it varies greatly depending on code structure - how many tasks can be worked on in paralel, without a "merge hell".
+
+And, here we come to the number one benefit of (micro)service oriented architecture over a monolith - more engineers can work on it efficiently. I'll write more about that later :)

@@ -23,3 +23,6 @@ package-lock.json
 pnpm-lock.yaml
 
 .astro
+
+# sample files
+.trash

@@ -20,6 +20,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/stepanh' },
   ],
   footNote: `
-  © 2024 STEHIL
+  © 2024 Stepan Hilbert
   `,
 };

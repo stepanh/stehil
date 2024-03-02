@@ -1,0 +1,67 @@
+---
+publishDate: 2024-03-01
+title: Microservices vs the Monolith
+excerpt: Different scenarios demand different architecture
+image: /images/city.jpeg
+category: Software Engineering
+tags:
+  - startups
+---
+
+TLDR; Google, AWS and many others love microservices; but that doesn't mean they are the best choice for 3 guys in a basement. 
+
+
+## The story so far
+
+Once upon a time, every app was one big pile of code. That got messy over time. So, now we split apps into small independent pieces called (micro)services.
+
+It just makes sense, right? Instead of one big pot of spaghetti, we have 20 neat dishes. It's far easier to trace where each spaghetti goes.
+
+There is just one problem: *These dishes must talk to each other.* We need more pasta to connect a dish to a dish and these are the fat macaroni - the slow, over-the-network pasta variant. Macaroni in the wrong place = a performance disaster.
+
+In other words - plenty of people jumped on microservices, because they were told from every direction[^1] that it's just the better modern way... and got burned. Then came a few voices[^2] praising the monolith. Before we jump back - let's compare:
+
+
+### Monolith cons
+- As the codebase grows, it can be hard to grasp it, especially for a new teammate.
+- Merging will become painful when the team grows over a certain size (that size can be anywhere from 4 to 20, depending on how easy it is to parallelise work).
+- One bug can bring down the entire app.
+- One performance issue can slow down the entire app.
+- The app is bigger so instances will take longer to spin up and consume more resources.
+- Parts of the app cannot be independently scaled.
+- It may not be possible to introduce a new framework or language for part of the app.
+
+### Microservice cons
+- Performance suffers when one service needs to await another.
+- Sharing code across services requires more complexity (shared library etc.)
+- It can be hard to grasp how a feature works when it needs to be traced across multiple services.
+- More stuff to deploy.
+- More stuff to monitor.
+- More complex dev environment.
+- Communication between services requires more complexity (i.e. the Event Bus or authentication).
+- It's harder to make changes that span across services and deploy without downtime.
+- Service-oriented architecture is more complex to design.
+
+IMHO, the best architecture for a given app is such that minimises the cons. **It can evolve over time as the team and the app grows and priorities shift.** Here are some thoughts on how to minimise the cons:
+
+### Split wisely
+A 'microservice' implies something really small. Something that you split when it reaches a certain size. Don't ever do that!
+
+I have seen an app where every feature with a name was in its own microservice. It was a complete disaster - ridiculously complex and unbelievably slow. This well-meant fiasco came around as the architect read a book on microservices. To avoid this I much prefer **dropping the 'micro' and just calling things 'a service'**. You should be very careful about making something a separate service. It's all too easy to end up with a chain of services calling each other - killing performance.
+
+A self-contained functionality is a candidate for a service. For example:
+- authentication
+- checkout
+- billing
+- a critical feature
+- a compute-intensive feature
+
+It will most likely be harmful to split any of these further.
+
+### Building an MVP
+A monolith is very compelling when the team is small, when it's not clear what the product will be, and the deadline is yesterday. This might mean a painful rewrite in future - but that is a much better outcome than having no product. And, it is generally easier to split a monolith, than reshuffle services.
+
+
+[^1]: See [Building Microservices](https://www.amazon.com/Building-Microservices-Designing-Fine-Grained-Systems/dp/1491950358), [Microservice Patterns](https://www.manning.com/books/microservices-patterns) and many other books
+
+[^2]: DHH was not afraid to go against almost everyone, [defending the monolith](https://signalvnoise.com/svn3/the-majestic-monolith/) and he [continues to do so](https://world.hey.com/dhh/how-to-recover-from-microservices-ce3803cc).

@@ -85,6 +85,9 @@ import { UI } from '~/utils/config';
         case 'twitter':
           href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
           break;
+        case 'twitter-discuss':
+          href = `https://twitter.com/search?q=${url}`;
+          break;
         case 'linkedin':
           href = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${text}`;
           break;

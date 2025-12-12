@@ -1,0 +1,45 @@
+---
+publishDate: 2025-12-12
+title: Frontend Development In 2026
+excerpt: Some say React won. Not even close!
+image: /images/frontend-2026.jpg
+category: Software Engineering
+tags:
+  - startups
+---
+
+Allow me to make a fool of myself and make a few predictions.
+
+## React will continue to stagnate
+
+The market leader[^1] is showing it's age - Virtual DOM nad synthetic events have more drawbacks than benefits in modern browsers. Instead of simplifying, React is now more complex than ever before. "Hooks" look simple but are a beast under the hood. "RSCs" don't even try to look simple (to be fair, they do add a whole backend framework to React). Server interviened with frontend feels both magical and hacky [and can get you hacked](https://www.kaspersky.com/blog/react4shell-vulnerability-cve-2025-55182/54915/). React compiler will attempt to patch the cracks, but don't bet on it to make things simpler.
+Of course, React still has a lot going for it. The ecosystem is massive. JSX is pleasant to use. And, historically it got a lot right - this is the framework that called out the once-holy MVC pattern and won.
+
+### TanStack is the new kingmaker
+
+Libraries like ~~React~~ TanStack Query have already pulled 27k+ devs into their Discord. Through Query, they discover TanStack Start, other libs and ultimately even SolidJS — which offers the React-like syntax devs love, but without the bloat, rendering quirks, and baggage.
+
+### The Local-First revolution is coming
+
+Linear.app showed us the way: no skeletons, no loaders, just instant data. Why custom-code Optimistic UI when an amazing lib can handle that and much more for you? Caveat? These sync-engines are beasts to build. Keep an eye on [LocalFirst.fm](https://www.localfirst.fm/), **Zero**, and **TanStack DB**.
+
+### Cross-platform: The "Write Once" Dream
+
+Tools come and go but none dominates.
+
+- **Expo:** Current leader and inovator. It is single-handedly keeping React relevant for mobile.
+- **CapacitorJS:** Tried, tested, evolving - is that good enough?
+- **Tauri:** Great for desktop, but its mobile story hasn't delivered the bang I was hoping for in 2025.
+
+### The State of the Rest
+
+- **Svelte:** State of the art with Vercel backing. Its unique syntax puts some off, but it is deeply loved by those who use it.
+- **Vue:** Innovating in a better direction than React (replacing VDOM with [Vapor](https://vueschool.io/articles/news/vue-js-2025-in-review-and-a-peek-into-2026/)), but is not there yet. It might struggle to get a second chance from the industry, just like the completely renewed [Angular](https://angular.love/angular-21-whats-new).
+- **Solid:** The brave developer's choice. It looks like React, has a small footprint, runs fast like Svelte, and features amazing reactivity with Signals.
+- **Preact:** The sensible choice that sadly seems to have lost its momentum.
+
+### The Verdict for 2026?
+
+**Local-first** will become the standard for serious apps. The "React Killers" (Svelte, Solid, Vue) will continue to fight for second place with no clear winner. Meanwhile, we are still waiting on a truly unified cross-platform tool that realizes the dream of Web + iOS + Android from one codebase without compromises.
+
+[^1]: [State of JS survey](https://2024.stateofjs.com/en-US/libraries/front-end-frameworks/)

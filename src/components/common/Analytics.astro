@@ -1,10 +1,26 @@
 ---
-import { GoogleAnalytics } from '@astrolib/analytics';
 import { ANALYTICS } from '~/utils/config';
 ---
 
 {
   ANALYTICS?.vendors?.googleAnalytics?.id ? (
-    <GoogleAnalytics id={String(ANALYTICS.vendors.googleAnalytics.id)} partytown={ANALYTICS?.vendors?.googleAnalytics?.partytown} />
+    <>
+      <script
+        is:inline
+        type={ANALYTICS?.vendors?.googleAnalytics?.partytown ? "text/partytown" : "text/javascript"}
+        src={`https://www.googletagmanager.com/gtag/js?id=${String(ANALYTICS.vendors.googleAnalytics.id)}`}
+      />
+      <script
+        is:inline
+        type={ANALYTICS?.vendors?.googleAnalytics?.partytown ? "text/partytown" : "text/javascript"}
+        define:vars={{ id: String(ANALYTICS.vendors.googleAnalytics.id) }}
+      >
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', id);
+      </script>
+    </>
   ) : null
 }

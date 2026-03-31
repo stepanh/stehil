@@ -15,11 +15,11 @@ export const footerData = {
   secondaryLinks: [
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://twitter.com/stepanhilbert' },
+    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/stepanhilbert' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/stepanh' },
   ],
   footNote: `
-  © 2024 Stepan Hilbert
+  © 2026 Stepan Hilbert
   `,
 };

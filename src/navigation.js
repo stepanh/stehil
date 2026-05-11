@@ -3,6 +3,10 @@ import { getPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
+      text: 'Home',
+      href: getPermalink('/'),
+    },
+    {
       text: 'About',
       href: getPermalink('/about'),
     },
@@ -10,10 +14,8 @@ export const headerData = {
 };
 
 export const footerData = {
-  links: [
-  ],
-  secondaryLinks: [
-  ],
+  links: [],
+  secondaryLinks: [],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/stepanhilbert' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },

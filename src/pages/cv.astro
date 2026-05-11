@@ -7,6 +7,16 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  <style>
+    @media print {
+      body,
+      html,
+      main,
+      #__astro {
+        background: #fff !important;
+      }
+    }
+  </style>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto border-b border-gray-200 dark:border-slate-800">
       <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading">Stepan Hilbert</h1>
@@ -68,7 +78,7 @@ const metadata = {
           <!-- Mapnook -->
           <div class="flex flex-col sm:flex-row gap-5">
             <div
-              class="shrink-0 w-12 h-12 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-sm mt-1 border border-slate-200 dark:border-slate-700"
+              class="shrink-0 w-12 h-12 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-sm mt-1 border border-slate-200 dark:border-slate-700 print:bg-white print:dark:bg-white print:shadow-none"
             >
               <a
                 href="https://mapnook.com"
@@ -113,7 +123,7 @@ const metadata = {
           <!-- Budgetly -->
           <div class="flex flex-col sm:flex-row gap-5">
             <div
-              class="shrink-0 w-12 h-12 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-sm mt-1 border border-slate-200 dark:border-slate-700"
+              class="shrink-0 w-12 h-12 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-sm mt-1 border border-slate-200 dark:border-slate-700 print:bg-white print:dark:bg-white print:shadow-none"
             >
               <a
                 href="https://www.budgetly.com.au"
@@ -154,7 +164,7 @@ const metadata = {
           <!-- UENI Ltd -->
           <div class="flex flex-col sm:flex-row gap-5">
             <div
-              class="shrink-0 w-12 h-12 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-sm mt-1 border border-slate-200 dark:border-slate-700"
+              class="shrink-0 w-12 h-12 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-sm mt-1 border border-slate-200 dark:border-slate-700 print:bg-white print:dark:bg-white print:shadow-none"
             >
               <a
                 href="https://ueni.com"
@@ -193,7 +203,7 @@ const metadata = {
           <!-- Node Vision -->
           <div class="flex flex-col sm:flex-row gap-5">
             <div
-              class="shrink-0 w-12 h-12 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-sm mt-1 border border-slate-200 dark:border-slate-700"
+              class="shrink-0 w-12 h-12 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-sm mt-1 border border-slate-200 dark:border-slate-700 print:bg-white print:dark:bg-white print:shadow-none"
             >
               <a
                 href="https://nodevision.com.au"
@@ -249,7 +259,7 @@ const metadata = {
           <!-- JCU -->
           <div class="flex flex-col sm:flex-row gap-5">
             <div
-              class="shrink-0 w-12 h-12 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-sm mt-1 border border-slate-200 dark:border-slate-700"
+              class="shrink-0 w-12 h-12 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-sm mt-1 border border-slate-200 dark:border-slate-700 print:bg-white print:dark:bg-white print:shadow-none"
             >
               <a
                 href="https://www.jcu.edu.au/"
@@ -278,7 +288,7 @@ const metadata = {
           <!-- University of Economics, Prague -->
           <div class="flex flex-col sm:flex-row gap-5">
             <div
-              class="shrink-0 w-12 h-12 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-sm mt-1 border border-slate-200 dark:border-slate-700"
+              class="shrink-0 w-12 h-12 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-sm mt-1 border border-slate-200 dark:border-slate-700 print:bg-white print:dark:bg-white print:shadow-none"
             >
               <a
                 href="https://www.vse.cz/english/"
@@ -324,8 +334,13 @@ const metadata = {
               'Product Strategy',
               'Full-Stack Development',
               'TypeScript',
+              'React',
+              'PostgreSQL',
+              'AWS',
+              'Cloudflare',
+              'Google Cloud',
             ].map((skill) => (
-              <span class="text-sm bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 transition-colors text-slate-800 dark:text-slate-300 px-4 py-2 rounded-full font-medium shadow-sm border border-slate-200 dark:border-slate-700">
+              <span class="text-sm bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 transition-colors text-slate-800 dark:text-slate-300 px-4 py-2 rounded-full font-medium shadow-sm border border-slate-200 dark:border-slate-700 print:bg-white print:dark:bg-white print:shadow-none">
                 {skill}
               </span>
             ))
